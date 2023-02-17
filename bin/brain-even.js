@@ -30,6 +30,7 @@ const brainEven = () => {
     return incorrectUnswer(name);
   }
   const q3 = question(17);
+  console.log(q3);
   const q3A = questionAnswer();
   if (q3A === 'no') {
     res.push(1);
