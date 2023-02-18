@@ -4,7 +4,6 @@ import {
   questionAnswer, hello, question, getRandomInt,
 } from '../src/index.js';
 
-
 const brainEven = () => {
   console.log(hello());
   const name = readlineSync.question('May I have your name? ');
