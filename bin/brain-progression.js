@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { hello } from '../src/index.js';
+import { greetings } from '../src/index.js';
 
 const brainProgression = () => {
-  console.log(hello());
+  console.log(greetings());
   const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   let u = 0;
   let answer = '';
   let finish = '';

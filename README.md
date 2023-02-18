@@ -1,8 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/OlegSiVl/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/OlegSiVl/frontend-project-lvl1/actions)
 
-https://asciinema.org/a/pGEaUd76pcLLbmUTmBvMzBKAC
-https://asciinema.org/a/0XRvJ7LKiaKNvHnCpKuNE2LTO
-https://asciinema.org/a/jK5jg6Xjso7KiCNnEaHQudZMv
-https://asciinema.org/a/6F8KtuDF81yxYPZSnU8uUSlFu
-https://asciinema.org/a/XYQSQmeWGpP23pAsdY8XyyLcS
+https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9
+https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl
+https://asciinema.org/a/X8T2cmO6ZLu9ChirI92f9SQuY
+https://asciinema.org/a/DqVBxGbEFmkUBRbzodAFU7Btv
+https://asciinema.org/a/MOXscdE4ZIEFHUHLWe1XBIgn2

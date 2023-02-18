@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const hello = () => 'Welcome to the Bain Games!';
+export const greetings = () => 'Welcome to the Brain Games!';
 
 export const question = (a, base = '') => `Question: ${a} ${base}`;
 

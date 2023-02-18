@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
-  questionAnswer, hello, question, getRandomInt,
+  questionAnswer, greetings, question, getRandomInt,
 } from '../src/index.js';
 
 const brainEven = () => {
-  console.log(hello());
+  console.log(greetings());
   const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+
   let i = 0;
   let finish = '';
   let answer = '';
