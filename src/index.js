@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 export const hello = () => 'Welcome to the Bain Games!';
 
-export const question = (a) => `Question: ${a}`;
+export const question = (a, base = '') => `Question: ${a} ${base}`;
 
 export const questionAnswer = () => readlineSync.question('Your answer: ');
 
@@ -16,4 +16,11 @@ export const brainCalcFunc = () => {
   const operand1 = getRandomInt(50, 100);
   const rand = Math.floor(Math.random() * operator.length);
   return operand + operator[rand] + operand1;
+};
+
+export const gcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
 };
