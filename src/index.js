@@ -168,8 +168,7 @@ export function brainProgression() {
     const qA = answer;
     // Проверяем ответ и выводим соответствующее сообщение
     const incorrectAnswer = () => {
-      console.log(`'${Number(qA)}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      return `\nLet's try again, ${name}!`;
+      console.log(`'${Number(qA)}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
     };
     if (Number(qA) === correctAnswer) {
       console.log('Correct!');
