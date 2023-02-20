@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/OlegSiVl/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/OlegSiVl/frontend-project-lvl1/actions)
 
 ### Code Climate linter status:
-[![Maintainability](https://api.codeclimate.com/v1/badges/979ce063440b6f705eb2/maintainability)](https://codeclimate.com/github/OlegSiVl/nodejs-package/maintainability)
+
 
 ## Setup
 
