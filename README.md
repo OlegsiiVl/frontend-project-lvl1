@@ -7,10 +7,10 @@
 make install
 ```
 
-## Run publish
+## Start debugging
 
 ```bash
-make lint
+make publish
 ```
 
 ## Run code test
@@ -19,8 +19,7 @@ make lint
 make lint
 ```
 
- ## Asciinema example of how the game works:
-
+ ## Asciinema example of how the game works
 ## brain-even :
 [![asciicast](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl.svg)](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl)
 
