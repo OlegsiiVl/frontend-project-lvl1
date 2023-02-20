@@ -42,7 +42,7 @@ export default function brainEven() {
   const incorrectAnswer = (a) => `'${a}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`;
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (i < 3) {
-    const number = getRandomInt(0, 100);
+    const number = getRandomInt(1, 100);
     const q = question(number);
     console.log(q);
     const qA = questionAnswer();
