@@ -13,7 +13,7 @@ make install
 make lint
 ```
 
-## Run test code
+## Run code test
 
 ```bash
 make lint
