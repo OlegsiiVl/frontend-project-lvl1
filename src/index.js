@@ -1,18 +1,18 @@
 import readlineSync from 'readline-sync';
-import getRandomInt from './helpers.js';
+import getRandomNumber from './helpers.js';
 
 const greetings = () => 'Welcome to the Brain Games!';
 const question = (a, base = '') => `Question: ${a} ${base}`;
 const questionAnswer = () => readlineSync.question('Your answer: ');
 const brainCalcFunc = (a, b, c) => `Question: ${a} ${c} ${b}`;
-const total = (a, b, c) => {
+const total = (number1, number2, operator) => {
   let res = 0;
-  if (c === '+') {
-    res = a + b;
-  } else if (c === '-') {
-    res = a - b;
-  } else if (c === '*') {
-    res = a * b;
+  if (operator === '+') {
+    res = number1 + number2;
+  } else if (operator === '-') {
+    res = number1 - number2;
+  } else if (operator === '*') {
+    res = number1 * number2;
   }
   return res;
 };
@@ -30,6 +30,13 @@ const isPrime = (num) => {
   }
   return num !== 1;
 };
+function isEven(num) {
+  const i = 2;
+if (num % i === 0) {
+      return true;
+} 
+  return false;
+}
 
 export default function brainEven() {
   console.log(greetings());
@@ -42,14 +49,14 @@ export default function brainEven() {
   const incorrectAnswer = (a) => `'${a}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`;
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (i < 3) {
-    const number = getRandomInt(1, 100);
+    const number = getRandomNumber(1, 100);
     const q = question(number);
     console.log(q);
     const qA = questionAnswer();
-    if (number % 2 === 0) {
+    if (isEven(number)) {
       answer = 'yes';
       i += 1;
-    } else if (number % 2 !== 0) {
+    } else {
       answer = 'no';
       i += 1;
     }
@@ -75,8 +82,8 @@ export function brainCalc() {
   const incorrectAnswer = (a) => `'${a}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`;
   console.log('What is the result of the expression?');
   while (i < 3) {
-    const operand = getRandomInt(1, 5);
-    const operand1 = getRandomInt(5, 10);
+    const operand = getRandomNumber(1, 5);
+    const operand1 = getRandomNumber(5, 10);
     const operator = ['+', '-', '*'];
     const rand = Math.floor(Math.random() * operator.length);
     const operator1 = operator[rand];
@@ -112,7 +119,7 @@ export const brainPrime = () => {
   const incorrectAnswer = (a) => `'${a}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`;
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   while (i < 3) {
-    const number = getRandomInt(0, 100);
+    const number = getRandomNumber(0, 100);
     const q = question(number);
     console.log(q);
     const qA = questionAnswer();
@@ -192,8 +199,8 @@ export const brainGcd = () => {
   const incorrectAnswer = (a) => `'${a}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`;
   console.log('Find the greatest common divisor of given numbers.');
   while (i < 3) {
-    const number1 = getRandomInt(1, 25);
-    const number2 = getRandomInt(25, 100);
+    const number1 = getRandomNumber(1, 25);
+    const number2 = getRandomNumber(25, 100);
     const q = question(number1, number2);
     console.log(q);
     const qA = questionAnswer();
