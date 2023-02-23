@@ -5,7 +5,7 @@ const greetings = () => 'Welcome to the Brain Games!';
 const question = (a, base = '') => `Question: ${a} ${base}`;
 const questionAnswer = () => readlineSync.question('Your answer: ');
 const brainCalcFunc = (a, b, c) => `Question: ${a} ${c} ${b}`;
-const total = (number1, number2, operator) => {
+const calculate = (number1, number2, operator) => {
   let res = 0;
   if (operator === '+') {
     res = number1 + number2;
@@ -32,9 +32,9 @@ const isPrime = (num) => {
 };
 function isEven(num) {
   const i = 2;
-if (num % i === 0) {
-      return true;
-} 
+  if (num % i === 0) {
+    return true;
+  }
   return false;
 }
 
@@ -90,11 +90,11 @@ export function brainCalc() {
     const q = brainCalcFunc(operand, operand1, operator1);
     console.log(q);
     const qA = questionAnswer();
-    if (qA === total(operand, operand1, operator1)) {
+    if (qA === calculate(operand, operand1, operator1)) {
       answer = Number(qA);
       i += 1;
-    } else if (qA !== total(operand, operand1, operator1)) {
-      answer = total(operand, operand1, operator1);
+    } else if (qA !== calculate(operand, operand1, operator1)) {
+      answer = tocalculatetal(operand, operand1, operator1);
       i += 1;
     }
     if (answer === Number(qA)) {
