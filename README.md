@@ -24,10 +24,10 @@ make lint
 
  ## Asciinema example of how the game works
 ## brain-even :
-[![asciicast](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl)]
+[![asciicast](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl.svg)](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl)
 
 ## brain-calc : 
-[![asciicast]](https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9)
+[![asciicast](https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9.svg)](https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9)
 
 ## brain-gcd :
 [![asciicast](https://asciinema.org/a/X8T2cmO6ZLu9ChirI92f9SQuY.svg)](https://asciinema.org/a/X8T2cmO6ZLu9ChirI92f9SQuY)
