@@ -155,13 +155,13 @@ export function brainProgression() {
   console.log('What number is missing in the progression?');
   while (u < 3) {
     // Генерируем случайную длину прогрессии от 5 до 10
-    const length = Math.floor(Math.random() * 6) + 5;
+    const length = getRandomNumber(5, 10);
     // Генерируем случайную позицию скрытого элемента
-    const hiddenIndex = Math.floor(Math.random() * length);
+    const hiddenIndex = getRandomNumber(0, length);
     // Генерируем случайный первый член прогрессии
-    const start = Math.floor(Math.random() * 10);
+    const start = getRandomNumber(0, 10);
     // Генерируем случайный шаг прогрессии от 2 до 5
-    const step = Math.floor(Math.random() * 4) + 2;
+    const step = getRandomNumber(2, 5);
     // Создаем массив прогрессии с скрытым элементом
     const progression = [];
     for (let i = 0; i < length; i += 1) {
