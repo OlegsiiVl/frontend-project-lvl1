@@ -4,18 +4,30 @@ import getRandomNumber from './helpers.js';
 const greetings = () => 'Welcome to the Brain Games!';
 const question = (a, base = '') => `Question: ${a} ${base}`;
 const questionAnswer = () => readlineSync.question('Your answer: ');
-const brainCalcFunc = (a, b, c) => `Question: ${a} ${c} ${b}`;
-const calculate = (number1, number2, operator) => {
-  let res = 0;
-  if (operator === '+') {
-    res = number1 + number2;
-  } else if (operator === '-') {
-    res = number1 - number2;
-  } else if (operator === '*') {
-    res = number1 * number2;
+const calculateQuestion = (a, b, c) => `Question: ${a} ${c} ${b}`;
+const number1 = getRandomNumber(1, 5);
+const number2 = getRandomNumber(5, 10);
+const operator = ['+', '-', '*'];
+const rand = Math.floor(Math.random() * operator.length);
+const operator1 = operator[rand];
+function calculate() {
+  let result = 0;
+  switch (operator1) {
+    case '+':
+      result = number1 + number2;
+      break;
+    case '-':
+      result = number1 - number2;
+      break;
+    case '*':
+      result = number1 * number2;
+      break;
+    default:
+      return null;
   }
-  return res;
-};
+  return result;
+}
+
 const gcd = (a, b) => {
   if (b === 0) {
     return a;
@@ -42,7 +54,6 @@ export default function brainEven() {
   console.log(greetings());
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-
   let i = 0;
   let finish = '';
   let answer = '';
@@ -59,14 +70,12 @@ export default function brainEven() {
     } else {
       answer = 'no';
       i += 1;
-    }
-    if (answer === qA) {
+    } if (answer === qA) {
       console.log('Correct!');
     } else {
       return console.log(incorrectAnswer(qA));
     }
-  }
-  if (i === 3) {
+  } if (i === 3) {
     finish = console.log(`Congratulations, ${name}!`);
   }
   return finish;
@@ -82,19 +91,14 @@ export function brainCalc() {
   const incorrectAnswer = (a) => `'${a}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`;
   console.log('What is the result of the expression?');
   while (i < 3) {
-    const operand = getRandomNumber(1, 5);
-    const operand1 = getRandomNumber(5, 10);
-    const operator = ['+', '-', '*'];
-    const rand = Math.floor(Math.random() * operator.length);
-    const operator1 = operator[rand];
-    const q = brainCalcFunc(operand, operand1, operator1);
+    const q = calculateQuestion(number1, number2, operator1);
     console.log(q);
     const qA = questionAnswer();
-    if (qA === calculate(operand, operand1, operator1)) {
+    if (qA === calculate(number1, number2, operator1)) {
       answer = Number(qA);
       i += 1;
-    } else if (qA !== calculate(operand, operand1, operator1)) {
-      answer = calculate(operand, operand1, operator1);
+    } else if (qA !== calculate(number1, number2, operator1)) {
+      answer = calculate(number1, number2, operator1);
       i += 1;
     }
     if (answer === Number(qA)) {
@@ -199,8 +203,6 @@ export const brainGcd = () => {
   const incorrectAnswer = (a) => `'${a}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`;
   console.log('Find the greatest common divisor of given numbers.');
   while (i < 3) {
-    const number1 = getRandomNumber(1, 25);
-    const number2 = getRandomNumber(25, 100);
     const q = question(number1, number2);
     console.log(q);
     const qA = questionAnswer();
