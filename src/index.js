@@ -94,7 +94,7 @@ export function brainCalc() {
       answer = Number(qA);
       i += 1;
     } else if (qA !== calculate(operand, operand1, operator1)) {
-      answer = tocalculatetal(operand, operand1, operator1);
+      answer = calculate(operand, operand1, operator1);
       i += 1;
     }
     if (answer === Number(qA)) {
