@@ -7,7 +7,7 @@ export default function brainPrime() {
   let answer = '';
   helpersJs.conditionPrime();
   while (i < 3) {
-    const number = helpersJs.getRandomNumber(0, 20);
+    const number = helpersJs.getRandomNumber(1, 20);
     indexJs.question(number);
     const qA = indexJs.questionAnswer();
     if (helpersJs.isPrime(number)) {
