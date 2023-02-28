@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-// приветствие игрок
+// приветствие игрока
 export const name = {};
 export function helloAndIntroduction() {
   console.log('Welcome to the Brain Games!');

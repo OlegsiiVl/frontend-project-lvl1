@@ -12,7 +12,7 @@ export default function brainCalc() {
     helpersJs.calculateQuestion(number1, number2, operator);
     const qA = indexJs.questionAnswer();
     const correctAnswer = helpersJs.calculate(number1, number2, operator);
-    if (Number(qA) === correctAnswer) {
+    if (+qA === correctAnswer) {
       console.log('Correct!');
     } else {
       return indexJs.incorrectAnswer(qA, correctAnswer);

@@ -11,7 +11,7 @@ export default function brainGcd() {
     indexJs.question(number1, number2);
     const qA = indexJs.questionAnswer();
     const correctAnswer = helpersJs.gcd(number1, number2);
-    if (Number(qA) === helpersJs.gcd(number1, number2)) {
+    if (+qA === helpersJs.gcd(number1, number2)) {
       console.log('Correct!');
     } else {
       return indexJs.incorrectAnswer(qA, correctAnswer);

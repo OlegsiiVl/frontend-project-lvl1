@@ -16,7 +16,7 @@ export default function brainProgression() {
     indexJs.question(arr);
     const correctAnswer = start + hiddenIndex * step;
     const qA = indexJs.questionAnswer();
-    if (Number(qA) === correctAnswer) {
+    if (+qA === correctAnswer) {
       console.log('Correct!');
     } else {
       return indexJs.incorrectAnswer(qA, correctAnswer);
