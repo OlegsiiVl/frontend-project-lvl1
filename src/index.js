@@ -16,6 +16,8 @@ export const questionAnswer = () => readlineSync.question('Your answer: ');
 export function incorrectAnswer(qA, correctAnswer) {
   console.log(`'${qA}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name.player}!`);
 }
+// верный ответ на вопрос
+export const correctAnswer = () => console.log('Correct!');
 // конец игры
 export function finish() {
   console.log(`Congratulations, ${name.player}!`);

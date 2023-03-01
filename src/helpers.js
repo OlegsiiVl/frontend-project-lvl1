@@ -29,9 +29,9 @@ export function conditionEven() {
 export function isEven(num) {
   const i = 2;
   if (num % i === 0) {
-    return true;
+    return 'yes';
   }
-  return false;
+  return 'no';
 }
 // функционал brain-progression
 export function conditionProgression() {
