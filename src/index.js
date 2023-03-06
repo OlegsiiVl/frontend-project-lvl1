@@ -22,3 +22,18 @@ export const correctAnswer = () => console.log('Correct!');
 export function finish() {
   console.log(`Congratulations, ${name.player}!`);
 }
+// движок
+export function engine(questionGame, conditionGame) {
+  helloAndIntroduction();
+  console.log(conditionGame);
+  for (let i = 0; i < 3; i += 1) {
+    question(questionGame[0]);
+    const qA = questionAnswer();
+    const cA = questionGame[1];
+    if (qA === cA) {
+      console.log('Correct!');
+    } else {
+      return incorrectAnswer(qA, cA);
+    }
+  } return finish();
+}

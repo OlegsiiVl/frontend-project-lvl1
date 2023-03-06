@@ -1,5 +1,5 @@
 // функционал для всех игр
-export function getRandomNumber(min, max) {
+export default function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 // функционал brain-prime
@@ -27,8 +27,7 @@ export function conditionEven() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 }
 export function isEven(num) {
-  const i = 2;
-  if (num % i === 0) {
+  if (num % 2 === 0) {
     return 'yes';
   }
   return 'no';
