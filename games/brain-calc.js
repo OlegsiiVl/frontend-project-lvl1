@@ -1,21 +1,30 @@
-import * as indexJs from '../src/index.js';
-import * as helpersJs from '../src/helpers.js';
+import engine from '../src/index.js';
+import getRandomNumber from '../src/helpers.js';
 
+function calculate(number1, number2, operator) {
+  let result = 0;
+  switch (operator) {
+    case '+':
+      result = number1 + number2;
+      break;
+    case '-':
+      result = number1 - number2;
+      break;
+    case '*':
+      result = number1 * number2;
+      break;
+    default: return null;
+  } return String(result);
+}
 export default function brainCalc() {
-  indexJs.helloAndIntroduction();
-  let i = 0;
-  helpersJs.conditionCalc();
-  while (i < 3) {
-    const number1 = helpersJs.getRandomNumber(1, 5);
-    const number2 = helpersJs.getRandomNumber(5, 10);
-    const operator = ['+', '-', '*'][helpersJs.getRandomNumber(0, 3)];
-    helpersJs.calculateQuestion(number1, number2, operator);
-    const qA = indexJs.questionAnswer();
-    const correctAnswer = helpersJs.calculate(number1, number2, operator);
-    if (+qA === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      return indexJs.incorrectAnswer(qA, correctAnswer);
-    } i += 1;
-  } return i === 3 ? indexJs.finish() : null;
+  const conditionCalc = 'What is the result of the expression?';
+  const generateRoundCalc = () => {
+    const number1 = getRandomNumber(1, 5);
+    const number2 = getRandomNumber(6, 10);
+    const operator = ['+', '-', '*'][getRandomNumber(0, 3)];
+    const calculateQuestion = `${number1} ${operator} ${number2}`;
+    const answerCalc = () => calculate(number1, number2, operator);
+    return [calculateQuestion, answerCalc(calculateQuestion)];
+  };
+  engine(conditionCalc, generateRoundCalc);
 }

@@ -9,7 +9,7 @@ export function helloAndIntroduction() {
   name.player = namePlayer;
 }
 // вопрос
-export const question = (a, base = '') => console.log(`Question: ${a} ${base}`);
+export const question = (a) => console.log(`Question: ${a}`);
 // ответ на вопрос
 export const questionAnswer = () => readlineSync.question('Your answer: ');
 // не верный ответ на вопрос
@@ -17,23 +17,24 @@ export function incorrectAnswer(qA, correctAnswer) {
   console.log(`'${qA}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name.player}!`);
 }
 // верный ответ на вопрос
-export const correctAnswer = () => console.log('Correct!');
+export const correctAnswer = (a) => a();
 // конец игры
 export function finish() {
   console.log(`Congratulations, ${name.player}!`);
 }
 // движок
-export function engine(questionGame, conditionGame) {
+export const engine = (conditionGame, round) => {
   helloAndIntroduction();
   console.log(conditionGame);
   for (let i = 0; i < 3; i += 1) {
-    question(questionGame[0]);
+    const q = round();
+    question(q[0]);
     const qA = questionAnswer();
-    const cA = questionGame[1];
+    const cA = q[1];
     if (qA === cA) {
       console.log('Correct!');
     } else {
       return incorrectAnswer(qA, cA);
     }
   } return finish();
-}
+};

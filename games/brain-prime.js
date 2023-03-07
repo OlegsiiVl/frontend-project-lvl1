@@ -1,23 +1,19 @@
-import * as indexJs from '../src/index.js';
-import * as helpersJs from '../src/helpers.js';
+import engine from '../src/index.js';
+import getRandomNumber from '../src/helpers.js';
 
+function isPrime(num) {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  } return 'yes';
+}
 export default function brainPrime() {
-  indexJs.helloAndIntroduction();
-  let i = 0;
-  let answer = '';
-  helpersJs.conditionPrime();
-  while (i < 3) {
-    const number = helpersJs.getRandomNumber(1, 20);
-    indexJs.question(number);
-    const qA = indexJs.questionAnswer();
-    if (helpersJs.isPrime(number)) {
-      answer = 'yes';
-    } else {
-      answer = 'no';
-    } if (answer === qA) {
-      console.log('Correct!');
-    } else {
-      return indexJs.incorrectAnswer(qA, answer);
-    } i += 1;
-  } return i === 3 ? indexJs.finish() : null;
+  const conditionPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const roundPrime = () => {
+    const number = getRandomNumber(1, 20);
+    const answerPrime = (a) => isPrime(a);
+    return [number, answerPrime(number)];
+  };
+  engine(conditionPrime, roundPrime);
 }

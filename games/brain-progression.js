@@ -1,25 +1,27 @@
-import * as indexJs from '../src/index.js';
-import * as helpersJs from '../src/helpers.js';
+import engine from '../src/index.js';
+import getRandomNumber from '../src/helpers.js';
 
-export default function brainProgression() {
-  indexJs.helloAndIntroduction();
-  let u = 0;
-  helpersJs.conditionProgression();
-  while (u < 3) {
-    const length = helpersJs.getRandomNumber(5, 10);
-    const hiddenIndex = helpersJs.getRandomNumber(0, length);
-    const start = helpersJs.getRandomNumber(0, 10);
-    const step = helpersJs.getRandomNumber(2, 5);
-    const progression = [];
-    helpersJs.array(progression, start, step, hiddenIndex, length);
-    const arr = progression.join(' ');
-    indexJs.question(arr);
-    const correctAnswer = start + hiddenIndex * step;
-    const qA = indexJs.questionAnswer();
-    if (+qA === correctAnswer) {
-      console.log('Correct!');
+function array(progression, start, step, hiddenIndex, length) {
+  for (let i = 0; i < length; i += 1) {
+    if (i === hiddenIndex) {
+      progression.push('..');
     } else {
-      return indexJs.incorrectAnswer(qA, correctAnswer);
-    } u += 1;
-  } return u === 3 ? indexJs.finish() : null;
+      progression.push(start + i * step);
+    }
+  }
+}
+export default function brainProgression() {
+  const conditionProgression = 'What number is missing in the progression?';
+  const roundProgression = () => {
+    const length = getRandomNumber(5, 10);
+    const hiddenIndex = getRandomNumber(0, length);
+    const start = getRandomNumber(0, 10);
+    const step = getRandomNumber(2, 5);
+    const progression = [];
+    array(progression, start, step, hiddenIndex, length);
+    const arr = progression.join(' ');
+    const correctAnswer = start + hiddenIndex * step;
+    return [arr, String(correctAnswer)];
+  };
+  engine(conditionProgression, roundProgression);
 }

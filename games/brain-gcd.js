@@ -1,20 +1,19 @@
-import * as indexJs from '../src/index.js';
-import * as helpersJs from '../src/helpers.js';
+import engine from '../src/index.js';
+import getRandomNumber from '../src/helpers.js';
 
+function gcd(a, b) {
+  if (b === 0) {
+    return a;
+  } return String(gcd(b, a % b));
+}
 export default function brainGcd() {
-  indexJs.helloAndIntroduction();
-  let i = 0;
-  helpersJs.conditionGcd();
-  while (i < 3) {
-    const number1 = helpersJs.getRandomNumber(1, 5);
-    const number2 = helpersJs.getRandomNumber(5, 10);
-    indexJs.question(number1, number2);
-    const qA = indexJs.questionAnswer();
-    const correctAnswer = helpersJs.gcd(number1, number2);
-    if (+qA === helpersJs.gcd(number1, number2)) {
-      console.log('Correct!');
-    } else {
-      return indexJs.incorrectAnswer(qA, correctAnswer);
-    } i += 1;
-  } return i === 3 ? indexJs.finish() : null;
+  const conditionGcd = 'Find the greatest common divisor of given numbers.';
+  const roundGcd = () => {
+    const number1 = getRandomNumber(1, 5);
+    const number2 = getRandomNumber(6, 10);
+    const questionGcd = `${number1} ${number2}`;
+    const answerGcd = (a, b) => gcd(a, b);
+    return [questionGcd, answerGcd(number1, number2)];
+  };
+  engine(conditionGcd, roundGcd);
 }
