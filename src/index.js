@@ -23,7 +23,7 @@ export function finish() {
   console.log(`Congratulations, ${name.player}!`);
 }
 // движок
-export const engine = (conditionGame, round) => {
+export default function engine(conditionGame, round) {
   helloAndIntroduction();
   console.log(conditionGame);
   for (let i = 0; i < 3; i += 1) {
@@ -37,4 +37,4 @@ export const engine = (conditionGame, round) => {
       return incorrectAnswer(qA, cA);
     }
   } return finish();
-};
+}
