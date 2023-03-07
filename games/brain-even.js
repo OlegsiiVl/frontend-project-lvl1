@@ -6,8 +6,7 @@ export default function brainEven() {
   const isEven = (a) => (a % 2 === 0 ? 'yes' : 'no');
   const generateRoundEven = () => {
     const num = getRandomNumber(1, 100);
-    const answerEven = (a) => isEven(a);
-    return [num, answerEven(num)];
+    return [num, isEven(num)];
   };
   engine(conditionEven, generateRoundEven);
 }

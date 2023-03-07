@@ -12,8 +12,7 @@ export default function brainPrime() {
   const conditionPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const roundPrime = () => {
     const number = getRandomNumber(1, 20);
-    const answerPrime = (a) => isPrime(a);
-    return [number, answerPrime(number)];
+    return [number, isPrime(number)];
   };
   engine(conditionPrime, roundPrime);
 }
