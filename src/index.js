@@ -2,39 +2,37 @@ import readlineSync from 'readline-sync';
 
 // приветствие игрока
 export const name = {};
-export function helloAndIntroduction() {
+export function greetingInTheGame() {
   console.log('Welcome to the Brain Games!');
   const namePlayer = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${namePlayer}!`);
   name.player = namePlayer;
 }
 // вопрос
-export const question = (a) => console.log(`Question: ${a}`);
+export const questionFromTheGame = (a) => console.log(`Question: ${a}`);
 // ответ на вопрос
-export const questionAnswer = () => readlineSync.question('Your answer: ');
+export const answerToQuestion = () => readlineSync.question('Your answer: ');
 // не верный ответ на вопрос
-export function incorrectAnswer(qA, correctAnswer) {
-  console.log(`'${qA}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name.player}!`);
+export function incorrectAnswer(questionAnswer, correctAnswer) {
+  console.log(`'${questionAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name.player}!`);
 }
-// верный ответ на вопрос
-export const correctAnswer = (a) => a();
 // конец игры
-export function finish() {
+export function endGame() {
   console.log(`Congratulations, ${name.player}!`);
 }
 // движок
-export default function engine(conditionGame, round) {
-  helloAndIntroduction();
-  console.log(conditionGame);
+export default function gameEngine(gameCondition, round) {
+  greetingInTheGame();
+  console.log(gameCondition);
   for (let i = 0; i < 3; i += 1) {
-    const q = round();
-    question(q[0]);
-    const qA = questionAnswer();
-    const cA = q[1];
-    if (qA === cA) {
+    const startGame = round();
+    questionFromTheGame(startGame[0]);
+    const questionAnswer = answerToQuestion();
+    const correctAnswer = startGame[1];
+    if (questionAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      return incorrectAnswer(qA, cA);
+      return incorrectAnswer(questionAnswer, correctAnswer);
     }
-  } return finish();
+  } return endGame();
 }

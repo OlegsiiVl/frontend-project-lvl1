@@ -1,7 +1,7 @@
-import engine from '../src/index.js';
+import gameEngine from '../src/index.js';
 import getRandomNumber from '../src/helpers.js';
 
-function isPrime(num) {
+function hasPrime(num) {
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       return 'no';
@@ -10,9 +10,9 @@ function isPrime(num) {
 }
 export default function brainPrime() {
   const conditionPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const roundPrime = () => {
+  const generateRoundPrime = () => {
     const number = getRandomNumber(1, 20);
-    return [number, isPrime(number)];
+    return [number, hasPrime(number)];
   };
-  engine(conditionPrime, roundPrime);
+  gameEngine(conditionPrime, generateRoundPrime);
 }

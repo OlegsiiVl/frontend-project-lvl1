@@ -1,4 +1,4 @@
-import engine from '../src/index.js';
+import gameEngine from '../src/index.js';
 import getRandomNumber from '../src/helpers.js';
 
 function calculate(number1, number2, operator) {
@@ -22,9 +22,9 @@ export default function brainCalc() {
     const number1 = getRandomNumber(1, 5);
     const number2 = getRandomNumber(6, 10);
     const operator = ['+', '-', '*'][getRandomNumber(0, 3)];
-    const calculateQuestion = `${number1} ${operator} ${number2}`;
-    const answerCalc = () => calculate(number1, number2, operator);
-    return [calculateQuestion, answerCalc(calculateQuestion)];
+    const calculationQuestion = `${number1} ${operator} ${number2}`;
+    const calculateAnswer = () => calculate(number1, number2, operator);
+    return [calculationQuestion, calculateAnswer()];
   };
-  engine(conditionCalc, generateRoundCalc);
+  gameEngine(conditionCalc, generateRoundCalc);
 }
