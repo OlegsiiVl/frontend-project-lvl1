@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-
 // приветствие игрока
 export const name = {};
 export function greetingInTheGame() {
