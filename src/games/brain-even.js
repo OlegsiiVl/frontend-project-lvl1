@@ -1,5 +1,5 @@
-import gameEngine from '../src/index.js';
-import getRandomNumber from '../src/helpers.js';
+import gameEngine from '../index.js';
+import getRandomNumber from '../helpers.js';
 
 export default function brainEven() {
   const conditionEven = 'Answer "yes" if the number is even, otherwise answer "no".';

@@ -1,5 +1,5 @@
-import gameEngine from '../src/index.js';
-import getRandomNumber from '../src/helpers.js';
+import gameEngine from '../index.js';
+import getRandomNumber from '../helpers.js';
 
 function hasPrime(num) {
   for (let i = 2; i < num; i += 1) {

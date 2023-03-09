@@ -1,5 +1,5 @@
-import gameEngine from '../src/index.js';
-import getRandomNumber from '../src/helpers.js';
+import gameEngine from '../index.js';
+import getRandomNumber from '../helpers.js';
 
 function calculate(number1, number2, operator) {
   let result = 0;

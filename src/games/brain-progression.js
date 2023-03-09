@@ -1,5 +1,5 @@
-import gameEngine from '../src/index.js';
-import getRandomNumber from '../src/helpers.js';
+import gameEngine from '../index.js';
+import getRandomNumber from '../helpers.js';
 
 function arrayProgression(progression, start, step, hiddenIndex, length) {
   for (let i = 0; i < length; i += 1) {
