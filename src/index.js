@@ -1,38 +1,29 @@
 import readlineSync from 'readline-sync';
 
-// приветствие игрока
-export const name = {};
-export function greetingInTheGame() {
-  console.log('Welcome to the Brain Games!');
-  const namePlayer = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${namePlayer}!`);
-  name.player = namePlayer;
-}
-// вопрос
-export const questionFromTheGame = (a) => console.log(`Question: ${a}`);
-// ответ на вопрос
-export const answerToQuestion = () => readlineSync.question('Your answer: ');
-// не верный ответ на вопрос
-export function incorrectAnswer(questionAnswer, correctAnswer) {
-  console.log(`'${questionAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name.player}!`);
-}
-// конец игры
-export function endGame() {
-  console.log(`Congratulations, ${name.player}!`);
-}
-// движок
-export default function gameEngine(gameCondition, round) {
+export const greetingInTheGame = () => console.log('Welcome to the Brain Games!');
+export const setQuestionGame = (a) => console.log(`Question: ${a}`);
+export const getAnswerQuestion = () => readlineSync.question('Your answer: ');
+export const incorrectAnswer = (questionAnswer, correctAnswer, getNamePlayer) => {
+  console.log(`'${questionAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${getNamePlayer}!`);
+};
+export const endGame = (getNamePlayer) => {
+  console.log(`Congratulations, ${getNamePlayer}!`);
+};
+const gameEngine = (gameCondition, gameRound) => {
   greetingInTheGame();
+  const getNamePlayer = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${getNamePlayer}`);
   console.log(gameCondition);
   for (let i = 0; i < 3; i += 1) {
-    const startGame = round();
-    questionFromTheGame(startGame[0]);
-    const questionAnswer = answerToQuestion();
+    const startGame = gameRound();
+    setQuestionGame(startGame[0]);
+    const questionAnswer = getAnswerQuestion();
     const correctAnswer = startGame[1];
     if (questionAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      return incorrectAnswer(questionAnswer, correctAnswer);
+      return incorrectAnswer(questionAnswer, correctAnswer, getNamePlayer);
     }
-  } return endGame();
-}
+  } return endGame(getNamePlayer);
+};
+export default gameEngine;

@@ -6,7 +6,7 @@ function gcd(a, b) {
     return a;
   } return String(gcd(b, a % b));
 }
-export default function brainGcd() {
+export default function startBrainGcd() {
   const conditionGcd = 'Find the greatest common divisor of given numbers.';
   const generateRoundGcd = () => {
     const number1 = getRandomNumber(1, 5);

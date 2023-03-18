@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
-function calculate(number1, number2, operator) {
+const calculate = (number1, number2, operator) => {
   let result = 0;
   switch (operator) {
     case '+':
@@ -15,8 +15,8 @@ function calculate(number1, number2, operator) {
       break;
     default: return null;
   } return String(result);
-}
-export default function brainCalc() {
+};
+export default function startBrainCalc() {
   const conditionCalc = 'What is the result of the expression?';
   const generateRoundCalc = () => {
     const number1 = getRandomNumber(1, 5);

@@ -8,7 +8,7 @@ function hasPrime(num) {
     }
   } return 'yes';
 }
-export default function brainPrime() {
+export default function startBrainPrime() {
   const conditionPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const generateRoundPrime = () => {
     const number = getRandomNumber(2, 20);

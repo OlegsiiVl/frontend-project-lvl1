@@ -22,7 +22,6 @@ make publish
 make lint
 ```
 
- ## Asciinema example of how the game works
 [![asciicast](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl.svg)](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl)
 
 [![asciicast](https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9.svg)](https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9)

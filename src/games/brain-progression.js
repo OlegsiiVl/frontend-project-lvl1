@@ -10,7 +10,7 @@ function arrayProgression(progression, start, step, hiddenIndex, length) {
     }
   }
 }
-export default function brainProgression() {
+export default function startBrainProgression() {
   const conditionProgression = 'What number is missing in the progression?';
   const generateRoundProgression = () => {
     const length = getRandomNumber(5, 10);
