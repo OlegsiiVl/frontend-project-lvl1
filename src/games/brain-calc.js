@@ -22,8 +22,8 @@ const generateRoundCalc = () => {
   const answer = calculate(number1, number2, randomOperator);
   return [question, answer];
 };
+const descriptionCalc = 'What is the result of the expression?';
 const startBrainCalc = () => {
-  const descriptionCalc = 'What is the result of the expression?';
   gameEngine(descriptionCalc, generateRoundCalc);
 };
 export default startBrainCalc;
