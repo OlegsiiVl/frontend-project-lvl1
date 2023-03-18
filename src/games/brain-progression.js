@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
-function arrayProgression(progression, start, step, hiddenIndex, length) {
+const arrayProgression = (progression, start, step, hiddenIndex, length) => {
   for (let i = 0; i < length; i += 1) {
     if (i === hiddenIndex) {
       progression.push('..');
@@ -9,9 +9,9 @@ function arrayProgression(progression, start, step, hiddenIndex, length) {
       progression.push(start + i * step);
     }
   }
-}
-export default function startBrainProgression() {
-  const conditionProgression = 'What number is missing in the progression?';
+};
+const startBrainProgression = () => {
+  const descriptionProgression = 'What number is missing in the progression?';
   const generateRoundProgression = () => {
     const length = getRandomNumber(5, 10);
     const hiddenIndex = getRandomNumber(0, length);
@@ -21,7 +21,8 @@ export default function startBrainProgression() {
     arrayProgression(progression, start, step, hiddenIndex, length);
     const progressions = progression.join(' ');
     const correctAnswer = start + hiddenIndex * step;
-    return [progressions, String(correctAnswer)];
+    return [progressions, correctAnswer];
   };
-  gameEngine(conditionProgression, generateRoundProgression);
-}
+  gameEngine(descriptionProgression, generateRoundProgression);
+};
+export default startBrainProgression;

@@ -18,7 +18,7 @@ const gameEngine = (gameCondition, gameRound) => {
     const startGame = gameRound();
     setQuestionGame(startGame[0]);
     const questionAnswer = getAnswerQuestion();
-    const correctAnswer = startGame[1];
+    const correctAnswer = String(startGame[1]);
     if (questionAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
