@@ -7,24 +7,17 @@ const generateProgression = (length, start, step) => {
     progression.push(start + step * i);
   } return progression;
 };
-const progressionHiddenSymbol = (arr, hiddenIndex) => {
-  for (let i = 0; i < arr.length; i += 1) {
-    if (hiddenIndex <= arr.length) {
-      arr[hiddenIndex] = '..';
-    }
-  } return arr.join(' ');
-};
 
 const descriptionProgression = 'What number is missing in the progression?';
 const generateRoundProgression = () => {
   const length = getRandomNumber(5, 10);
   const start = getRandomNumber(0, 100);
   const step = getRandomNumber(2, 5);
-  const hiddenIndex = Math.floor(Math.random() * length);
-  const progression = generateProgression(length, start, step);
-  const correctAnswer = progression[hiddenIndex];
-  const question = progressionHiddenSymbol(progression, hiddenIndex);
-  return [question, correctAnswer];
+  const hiddenIndex = Math.floor(Math.random() * length); // индекс скрытого числа
+  const question = generateProgression(length, start, step);
+  const correctAnswer = question[hiddenIndex];
+  question[hiddenIndex] = '..';
+  return [question.join(' '), correctAnswer];
 };
 
 const startBrainProgression = () => {
