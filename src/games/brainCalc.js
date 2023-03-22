@@ -1,29 +1,29 @@
 import runEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
-const calculate = (number1, number2, opertator) => {
-  switch (opertator) {
+const calculate = (number1, number2, operator) => {
+  switch (operator) {
     case '+':
       return number1 + number2;
     case '-':
       return number1 - number2;
     case '*':
       return number1 * number2;
-    default: return null;
+    default:
+      throw new Error(`unknown operator ${operator}!`);
   }
 };
 const generateRoundCalc = () => {
   const number1 = getRandomNumber(1, 5);
   const number2 = getRandomNumber(6, 10);
   const operators = ['+', '-', '*'];
-  const numberOfOperators = operators.length;
-  const randomOperator = operators[getRandomNumber(0, numberOfOperators)];
+  const randomOperator = operators[getRandomNumber(0, operators.length)];
   const question = `${number1} ${randomOperator} ${number2}`;
   const answer = String(calculate(number1, number2, randomOperator));
   return [question, answer];
 };
-const descriptionCalc = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const startBrainCalc = () => {
-  runEngine(descriptionCalc, generateRoundCalc);
+  runEngine(description, generateRoundCalc);
 };
 export default startBrainCalc;
