@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import runEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const startBrainEven = () => {
@@ -8,6 +8,6 @@ const startBrainEven = () => {
     const number = getRandomNumber(1, 100);
     return [number, hasEven(number)];
   };
-  gameEngine(descriptionEven, generateRoundEven);
+  runEngine(descriptionEven, generateRoundEven);
 };
 export default startBrainEven;

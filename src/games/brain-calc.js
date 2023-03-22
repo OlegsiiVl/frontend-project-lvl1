@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import runEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const calculate = (number1, number2, randomOperator) => {
@@ -24,6 +24,6 @@ const generateRoundCalc = () => {
 };
 const descriptionCalc = 'What is the result of the expression?';
 const startBrainCalc = () => {
-  gameEngine(descriptionCalc, generateRoundCalc);
+  runEngine(descriptionCalc, generateRoundCalc);
 };
 export default startBrainCalc;

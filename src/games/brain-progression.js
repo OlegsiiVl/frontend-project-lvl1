@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import runEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const generateProgression = (length, start, step) => {
@@ -21,6 +21,6 @@ const generateRoundProgression = () => {
 };
 
 const startBrainProgression = () => {
-  gameEngine(descriptionProgression, generateRoundProgression);
+  runEngine(descriptionProgression, generateRoundProgression);
 };
 export default startBrainProgression;

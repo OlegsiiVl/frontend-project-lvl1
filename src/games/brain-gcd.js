@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import runEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
 const gcd = (a, b) => {
@@ -14,6 +14,6 @@ const generateRoundGcd = () => {
   return [gcdQuestion, gcd(number1, number2)];
 };
 const startBrainGcd = () => {
-  gameEngine(descriptionGcd, generateRoundGcd);
+  runEngine(descriptionGcd, generateRoundGcd);
 };
 export default startBrainGcd;
