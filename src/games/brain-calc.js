@@ -19,7 +19,7 @@ const generateRoundCalc = () => {
   const numberOfOperators = operators.length;
   const randomOperator = operators[getRandomNumber(0, numberOfOperators)];
   const question = `${number1} ${randomOperator} ${number2}`;
-  const answer = calculate(number1, number2, randomOperator);
+  const answer = String(calculate(number1, number2, randomOperator));
   return [question, answer];
 };
 const descriptionCalc = 'What is the result of the expression?';

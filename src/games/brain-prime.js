@@ -11,9 +11,9 @@ const hasPrime = (num) => {
   } return true;
 };
 const generateRoundPrime = () => {
-  const number = getRandomNumber(2, 20);
-  const expectedAnswer = hasPrime(number) ? 'yes' : 'no';
-  return [number, expectedAnswer];
+  const question = getRandomNumber(2, 20);
+  const answer = hasPrime(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 const descriptionPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const startBrainPrime = () => {

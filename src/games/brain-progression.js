@@ -15,9 +15,9 @@ const generateRoundProgression = () => {
   const step = getRandomNumber(2, 5);
   const hiddenIndex = Math.floor(Math.random() * length);
   const question = generateProgression(length, start, step);
-  const correctAnswer = question[hiddenIndex];
+  const answer = String(question[hiddenIndex]);
   question[hiddenIndex] = '..';
-  return [question.join(' '), correctAnswer];
+  return [question.join(' '), answer];
 };
 
 const startBrainProgression = () => {
