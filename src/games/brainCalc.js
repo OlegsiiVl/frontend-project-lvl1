@@ -1,8 +1,8 @@
 import runEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
-const calculate = (number1, number2, randomOperator) => {
-  switch (randomOperator) {
+const calculate = (number1, number2, opertator) => {
+  switch (opertator) {
     case '+':
       return number1 + number2;
     case '-':
