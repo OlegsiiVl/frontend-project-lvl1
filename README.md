@@ -34,28 +34,35 @@ npm link
 sudo npm link
 ```
 ### Запуск и демонстрация игр
-1. Игра: "Проверка на чётность" 
+1. Игра: "Проверка на чётность".
+Что бы запустить игру в командной строке(терминале) введите:
 ```
 brain-even
 ```
 [![asciicast](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl.svg)](https://asciinema.org/a/UwGmWLpSJeRXIkzYYXP45aogl)
-2. Игра: "Калькулятор"
+2. Игра: "Калькулятор".
+Что бы запустить игру в командной строке(терминале) введите:
 ```
 brain-calc
 ```
 [![asciicast](https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9.svg)](https://asciinema.org/a/fSDmguCxCYMXc9caGPvlPEbu9)
-3. Игра "НОД"
+3. Игра "НОД".
+Что бы запустить игру в командной строке(терминале) введите:
 ```
 brain-gcd
 ```
 [![asciicast](   https://asciinema.org/a/2cOw1Ct7ziRhTnvxbFCjhNTbl.svg)](   https://asciinema.org/a/2cOw1Ct7ziRhTnvxbFCjhNTbl)
-4. Игра "Арифметическая прогрессия"
+4. Игра "Арифметическая прогрессия".
+Что бы запустить игру в командной строке(терминале) введите:
 ```
 brain-progerssion
 ```
 [![asciicast](https://asciinema.org/a/MOXscdE4ZIEFHUHLWe1XBIgn2.svg)](https://asciinema.org/a/MOXscdE4ZIEFHUHLWe1XBIgn2)
-5. Игра "Простое ли число?"
+5. Игра "Простое ли число?".
+Что бы запустить игру в командной строке(терминале) введите:
 ```
 brain-prime
 ```
 [![asciicast](https://asciinema.org/a/DqVBxGbEFmkUBRbzodAFU7Btv.svg)](https://asciinema.org/a/DqVBxGbEFmkUBRbzodAFU7Btv)
+
+
