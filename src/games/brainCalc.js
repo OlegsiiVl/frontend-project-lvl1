@@ -1,7 +1,7 @@
 import runEngine from '../index.js';
 import getRandomNumber from '../helpers.js';
 
-const calculate = (number1, number2, operator) => {
+const calculate = (number1, operator, number2) => {
   switch (operator) {
     case '+':
       return number1 + number2;
@@ -19,7 +19,7 @@ const generateRoundCalc = () => {
   const operators = ['+', '-', '*'];
   const randomOperator = operators[getRandomNumber(0, operators.length)];
   const question = `${number1} ${randomOperator} ${number2}`;
-  const answer = String(calculate(number1, number2, randomOperator));
+  const answer = String(calculate(number1, randomOperator, number2));
   return [question, answer];
 };
 const description = 'What is the result of the expression?';
