@@ -20,7 +20,7 @@ Node.js 13.2.0 and higher.
 ```
 node -v
 ```
-1.1. Installation for Windows. Click => [download Node.js](https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi) зrun the file, and follow the instructions.  
+1.1. Installation for Windows. Click => [download Node.js](https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi) run the file, and follow the instructions.  
 1.2. Installation for MacOS. Click => [download Node.js](https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg) run the file, and follow the instructions.
 
 2. Clone this repository to your workstation (PC):
