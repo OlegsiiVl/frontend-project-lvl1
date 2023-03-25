@@ -13,9 +13,9 @@ This project is a set of 5 console math games designed to help break the monoton
 
 Each game has a unique set of rules. This project is designed to stimulate interest in mathematics and facilitate the learning process, or just to distract oneself.
 
-### Minimum system requirements
+## Minimum system requirements
 Node.js 13.2.0 and higher.
-### Installation instructions for the games
+## Installation instructions for the games
 1. Make sure you have the latest version of Node.js installed. If your version of Node.js is below 13.2.0, you will need to update it. If you do not have Node.js installed, you will need to install it. You can check the version using the following command in the console/terminal:
 ```
 node -v
@@ -35,7 +35,7 @@ npm link
 ```
 sudo npm link
 ```
-### Launching and demonstrating the games.
+## Launching and demonstrating the games.
 1. Game: "Even or Odd Check".
 To launch the game in the command prompt/terminal, enter:
 ```
