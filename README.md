@@ -18,6 +18,10 @@ Each game has a unique set of rules. This project is designed to stimulate inter
 2. Git version 2.39.1 and higher.
 ### Installation instructions for the games
 1. To install Git for Windows => [download Git](https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/Git-2.40.0-64-bit.exe) run the file, and follow the instructions.  
+To install Git for MacOS => In versions of Mavericks (10.9) and above, you can achieve this simply by running 'git' in the terminal for the first time. If Git is not installed, you will be prompted to install it.:
+```
+git --version
+```
 1.1. You can check the version using the following command in the console/terminal:
 ```
 git -v
