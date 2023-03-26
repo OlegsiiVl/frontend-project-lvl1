@@ -17,13 +17,13 @@ Each game has a unique set of rules. This project is designed to stimulate inter
 1. Node.js version 13.2.0 and higher.
 2. Git version 2.39.1 and higher.
 ### Installation instructions for the games
-1. To install Git for Windows => [download Git](https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/Git-2.40.0-64-bit.exe) run the file, and follow the instructions.
+1. To install Git for Windows => [download Git](https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/Git-2.40.0-64-bit.exe) run the file, and follow the instructions.  
 1.1. You can check the version using the following command in the console/terminal:
 ```
 git -v
 ```
 2. To install Node.js for Windows => Click => [download Node.js](https://nodejs.org/dist/v19.8.1/node-v19.8.1-x86.msi) run the file, and follow the instructions.  
-To install Node.js for MacOS => Click => [download Node.js](https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg) run the file, and follow the instructions.
+To install Node.js for MacOS => Click => [download Node.js](https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg) run the file, and follow the instructions.  
 2.1. You can check the version using the following command in the console/terminal:
 ```
 node -v
