@@ -14,21 +14,20 @@ This project is a set of 5 console math games designed to help break the monoton
 Each game has a unique set of rules. This project is designed to stimulate interest in mathematics and facilitate the learning process, or just to distract oneself.
 
 ### Minimum system requirements
-1. Node.js 13.2.0 and higher.
-2. Git
+1. Node.js version 13.2.0 and higher.
+2. Git version 2.39.1 and higher.
 ### Installation instructions for the games
 1. To install Git for Windows => [download Git](https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/Git-2.40.0-64-bit.exe) run the file, and follow the instructions.
 1.1. You can check the version using the following command in the console/terminal:
 ```
 git -v
 ```
-2. Make sure you have the latest version of Node.js installed. If your version of Node.js is below 13.2.0, you will need to update it. If you do not have Node.js installed, you will need to install it. You can check the version using the following command in the console/terminal:
+2. To install Node.js for Windows => Click => [download Node.js](https://nodejs.org/dist/v19.8.1/node-v19.8.1-x86.msi) run the file, and follow the instructions.  
+To install Node.js for MacOS => Click => [download Node.js](https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg) run the file, and follow the instructions.
+2.1. You can check the version using the following command in the console/terminal:
 ```
 node -v
 ```
-2.1. Installation for Windows. Click => [download Node.js](https://nodejs.org/dist/v18.15.0/node-v18.15.0-x86.msi) run the file, and follow the instructions.
-2.2. Installation for MacOS. Click => [download Node.js](https://nodejs.org/dist/v19.8.1/node-v19.8.1.pkg) run the file, and follow the instructions.
-
 3. Clone this repository to your workstation (PC):
 ```
 git clone https://github.com/OlegsiiVl/frontend-project-lvl1.git
