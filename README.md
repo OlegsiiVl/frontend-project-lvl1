@@ -13,10 +13,10 @@ This project is a set of 5 console math games designed to help break the monoton
 
 Each game has a unique set of rules. This project is designed to stimulate interest in mathematics and facilitate the learning process, or just to distract oneself.
 
-### Minimum system requirements
+## Minimum system requirements
 1. Node.js version 13.2.0 and higher.
 2. Git version 2.39.1 and higher.
-### Installation instructions for the games
+## Installation instructions for the games
 1. To install Git for Windows => [download Git](https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/Git-2.40.0-64-bit.exe) run the file, and follow the instructions.  
 To install Git for MacOS => In versions of Mavericks (10.9) and above, you can achieve this simply by running 'git' in the terminal for the first time. If Git is not installed, you will be prompted to install it.:
 ```
@@ -44,7 +44,7 @@ cd frontend-project-lvl1
 ```
 npm ci
 ```
-### Launching and demonstrating the games.
+## Launching and demonstrating the games.
 1. Game: "Even or Odd Check".
 To launch the game in the command prompt/terminal, enter:
 ```
