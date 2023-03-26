@@ -31,7 +31,7 @@ node -v
 
 3. Clone this repository to your workstation (PC):
 ```
-git clone git@github.com:OlegsiiVl/frontend-project-lvl1.git
+git clone https://github.com/OlegsiiVl/frontend-project-lvl1.git
 ```
 4. To navigate to the root directory of the project:
 ```
@@ -39,11 +39,7 @@ cd frontend-project-lvl1
 ```
 5. To install, enter the following command in the command prompt/terminal:
 ```
-npm link
-```
-5.1. If it does not work, run it with "sudo".:
-```
-sudo npm link
+npm ci
 ```
 ### Launching and demonstrating the games.
 1. Game: "Even or Odd Check".
