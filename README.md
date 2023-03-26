@@ -71,5 +71,3 @@ To launch the game in the command prompt/terminal, enter:
 brain-prime
 ```
 [![asciicast](https://asciinema.org/a/DqVBxGbEFmkUBRbzodAFU7Btv.svg)](https://asciinema.org/a/DqVBxGbEFmkUBRbzodAFU7Btv)
-
-[![asciicast](https://asciinema.org/a/2cOw1Ct7ziRhTnvxbFCjhNTbl.svg)](https://asciinema.org/a/2cOw1Ct7ziRhTnvxbFCjhNTbl)
