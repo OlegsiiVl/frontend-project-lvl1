@@ -13,7 +13,7 @@ const generateRoundProgression = () => {
   const length = getRandomNumber(5, 10);
   const start = getRandomNumber(0, 100);
   const step = getRandomNumber(2, 5);
-  const hiddenIndex = getRandomNumber(0, length);
+  const hiddenIndex = getRandomNumber(0, length - 1);
   const question = generateProgression(length, start, step);
   const answer = String(question[hiddenIndex]);
   question[hiddenIndex] = '..';
