@@ -14,7 +14,9 @@ const runEngine = (description, generateRound) => {
       console.log(`'${questionAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${playerName}!`);
       return;
-    } console.log('Correct!');
-  } console.log(`Congratulations, ${playerName}!`);
+    }
+    console.log('Correct!');
+  }
+  console.log(`Congratulations, ${playerName}!`);
 };
 export default runEngine;
