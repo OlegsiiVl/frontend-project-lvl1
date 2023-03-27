@@ -11,9 +11,10 @@ const generateProgression = (length, start, step) => {
 const description = 'What number is missing in the progression?';
 const generateRoundProgression = () => {
   const length = getRandomNumber(5, 10);
+  console.log(length);
   const start = getRandomNumber(0, 100);
-  const step = getRandomNumber(2, 5);
-  const hiddenIndex = getRandomNumber(0, length - 1);
+  const step = getRandomNumber(1, 5);
+  const hiddenIndex = getRandomNumber(0, length);
   const question = generateProgression(length, start, step);
   const answer = String(question[hiddenIndex]);
   question[hiddenIndex] = '..';
