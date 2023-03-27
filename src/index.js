@@ -7,10 +7,9 @@ const runEngine = (description, generateRound) => {
   console.log(`Hello, ${playerName}`);
   console.log(description);
   for (let i = 0; i < roundsCount; i += 1) {
-    const [question, answer] = generateRound();
+    const [question, correctAnswer] = generateRound();
     console.log(`Question: ${question}`);
     const questionAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = answer;
     if (questionAnswer !== correctAnswer) {
       console.log(`'${questionAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${playerName}!`);
