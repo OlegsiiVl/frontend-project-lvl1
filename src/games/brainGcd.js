@@ -11,9 +11,9 @@ const description = 'Find the greatest common divisor of given numbers.';
 const generateRound = () => {
   const number1 = getRandomNumber(1, 5);
   const number2 = getRandomNumber(6, 10);
-  const Question = `${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   const answer = String(findGcd(number1, number2));
-  return [Question, answer];
+  return [question, answer];
 };
 const startBrainGcd = () => {
   runEngine(description, generateRound);
