@@ -13,11 +13,12 @@ const generateRoundProgression = () => {
   const length = getRandomNumber(5, 10);
   const start = getRandomNumber(0, 100);
   const step = getRandomNumber(2, 5);
-  const question = generateProgression(length, start, step);
-  const hiddenIndex = getRandomNumber(0, question.length - 1);
-  const answer = String(question[hiddenIndex]);
-  question[hiddenIndex] = '..';
-  return [question.join(' '), answer];
+  const progression = generateProgression(length, start, step);
+  const hiddenIndex = getRandomNumber(0, progression.length - 1);
+  const answer = String(progression[hiddenIndex]);
+  progression[hiddenIndex] = '..';
+  const question = progression.join(' ');
+  return [question, answer];
 };
 const startBrainProgression = () => {
   runEngine(description, generateRoundProgression);
